@@ -38,7 +38,6 @@ def calculate_acc_cost_matrix(costs: np.ndarray) -> np.ndarray:
         for jdx in range(1, m):
             accmat[idx][jdx] = costs[idx][jdx] + min(accmat[idx - 1][jdx], accmat[idx][jdx - 1],
                                                      accmat[idx - 1][jdx - 1])
-    print(accmat)
     return accmat
 
 
