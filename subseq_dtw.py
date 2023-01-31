@@ -7,8 +7,8 @@
 import numpy as np
 import librosa
 
-frnd_gaussian = np.random.randn(, 5098)
-srnd_gaussian = np.random.randn(, 2023)
+frnd_gaussian = np.random.randn(1, 5098)
+srnd_gaussian = np.random.randn(1, 2023)
 
 TESTS = [[np.array([2, 4, 0, 4, 0, 0, 5, 2]), np.array([3, 0, 6])],
          [np.array([1, 2, 3, 4, 5, 7]), np.array([1, 2, 3])],
