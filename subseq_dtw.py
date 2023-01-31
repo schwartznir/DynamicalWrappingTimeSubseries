@@ -7,8 +7,8 @@
 import numpy as np
 import librosa
 
-frnd_gaussian = np.random.randn(1, 5098)
-srnd_gaussian = np.random.randn(1, 2023)
+frnd_gaussian = np.random.normal(0, 1, 5098)
+srnd_gaussian = np.random.normal(1, 1, 2023)
 
 TESTS = [[np.array([2, 4, 0, 4, 0, 0, 5, 2]), np.array([3, 0, 6])],
          [np.array([1, 2, 3, 4, 5, 7]), np.array([1, 2, 3])],
@@ -73,7 +73,7 @@ def subseq_dtw(signal: np.array, subsignal: np.array, distance=np.abs) -> list:
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    for idx in range(N):
+        for idx in range(N):
         currsignal, currsub = TESTS[idx]
         expected_ouput = librosa.sequence.dtw(currsub, currsignal, subseq=True)[1]
         expected_ouput = [(line[0], line[1]) for line in expected_ouput]
