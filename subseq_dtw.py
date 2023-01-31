@@ -7,12 +7,16 @@
 import numpy as np
 import librosa
 
+frnd_gaussian = np.random.randn(, 5098)
+srnd_gaussian = np.random.randn(, 2023)
+
 TESTS = [[np.array([2, 4, 0, 4, 0, 0, 5, 2]), np.array([3, 0, 6])],
          [np.array([1, 2, 3, 4, 5, 7]), np.array([1, 2, 3])],
          [np.array([1, 2, 3, 4, 5, 7]), np.array([5, 7])],
          [np.array([1, 2, 3, 4, 5, 7]), np.array([4])],
          [np.array([7, 2, 7, 4, 5, 7]), np.array([42])],
-         [np.array([1, 1, 1, 1, 1, 1]), np.array([-90, 90, 0])]]
+         [np.array([1, 1, 1, 1, 1, 1]), np.array([-90, 90, 0])],
+         [frnd_gaussian, srnd_gaussian]]
 N = len(TESTS)
 
 
