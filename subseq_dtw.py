@@ -2,7 +2,7 @@
 
 # We implement a variation of the Dynamical Time-Series Wrapping (aka DTW) which replaces
 # the best alignment problem with the best fit of a signal to another one on which one
-# has more data. ## POORLY WRITTEN!
+# has more data. 
 
 import numpy as np
 import librosa
@@ -79,3 +79,4 @@ if __name__ == '__main__':
         expected_ouput = [(line[0], line[1]) for line in expected_ouput]
         assert expected_ouput == subseq_dtw(currsignal, currsub), \
             f"Test no. {idx} failed.\n\t Test content:({currsignal, currsub}), Expected result {expected_ouput}"
+            
